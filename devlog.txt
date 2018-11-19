@@ -12,7 +12,9 @@ Brainstormed possible project ideas, ended with Food APIs:
 https://www.food2fork.com/about/api
 https://open.fda.gov/apis/food/enforcement/
 
-Website format is undecided.
+Website will take a search query and find it in the Food2Fork API.
+Matching information is presented in a table on the website. Provide
+information on the foods using another API (? TBD)
 ---------------------------------------------------------------------------
 
 ===========================================================================
