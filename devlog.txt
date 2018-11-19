@@ -8,8 +8,11 @@ To Do: Know What We're Doing
 Completed: API Decision, Website Format Decision
 ===========================================================================
 Everyone -- 2018-11-19 13:57
+Brainstormed possible project ideas, ended with Food APIs:
 https://www.food2fork.com/about/api
 https://open.fda.gov/apis/food/enforcement/
+
+Website format is undecided.
 ---------------------------------------------------------------------------
 
 ===========================================================================
