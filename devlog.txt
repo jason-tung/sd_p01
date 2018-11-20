@@ -1,13 +1,28 @@
-azrael -- Vincent Chi, Bill Ni, Jason Tung, Wei Wen Zhou
-SoftDev1 pd8
-P01 -- ArRESTed Development
-DevLog
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-===========================================================================
-To Do: Know What We're Doing
-Completed: API Decision, Website Format Decision
-===========================================================================
-Everyone -- 2018-11-19 13:57
+azrael
+jason tung
+vincent chi
+wei wen zhou
+bill ni
+pd 8
+---------------------
+<Project Title/Description>
+
+
+ ______   ______   __   __   __       ______   _______     
+/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\    
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__  
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\ 
+  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/ 
+   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \ 
+    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/ 
+==============================================================
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+vincentC -- 2018-11-19 13:57
+--------------------------------------------------------------
 Brainstormed possible project ideas, ended with Food APIs:
 https://www.food2fork.com/about/api
 https://open.fda.gov/apis/food/enforcement/
@@ -15,9 +30,5 @@ https://open.fda.gov/apis/food/enforcement/
 Website will take a search query and find it in the Food2Fork API.
 Matching information is presented in a table on the website. Provide
 information on the foods using another API (? TBD)
----------------------------------------------------------------------------
+==============================================================
 
-===========================================================================
-To Do:
-Completed:
-===========================================================================
