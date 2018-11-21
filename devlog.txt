@@ -21,6 +21,14 @@ pd 8
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 
+tungJ -- 2018-11-20 13:57
+--------------------------------------------------------------
+Decided to go w/ BNi's idea for an almanac.
+Assorted informations and trivia about certain places with weird misc. stuff--sort of like a news paper.
+SEE: design.pdf
+==============================================================
+
+
 vincentC -- 2018-11-19 13:57
 --------------------------------------------------------------
 Brainstormed possible project ideas, ended with Food APIs:
