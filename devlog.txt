@@ -7,7 +7,7 @@ wei wen zhou
 bill ni
 pd 8
 ---------------------
-<Project Title/Description>
+Project Almanac - weather, news, poetry, and anything else applicable
 
 
  ______   ______   __   __   __       ______   _______     
