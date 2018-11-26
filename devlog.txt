@@ -38,7 +38,6 @@ Assorted informations and trivia about certain places with weird misc. stuff--so
 SEE: design.pdf
 ==============================================================
 
-
 vincentC -- 2018-11-19 13:57
 --------------------------------------------------------------
 Brainstormed possible project ideas, ended with Food APIs:
@@ -50,3 +49,6 @@ Matching information is presented in a table on the website. Provide
 information on the foods using another API (? TBD)
 ==============================================================
 
+vincentC -- 2018-11-25 23:30
+--------------------------------------------------------------
+Added draft(?) timeline to the design PDF.
