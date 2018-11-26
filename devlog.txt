@@ -1,1 +1,54 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+azrael
+jason tung
+vincent chi
+wei wen zhou
+bill ni
+pd 8
+---------------------
+Project Almanac - weather, news, poetry, and anything else applicable
+
+
+ ______   ______   __   __   __       ______   _______     
+/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\    
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__  
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\ 
+  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/ 
+   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \ 
+    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/ 
+==============================================================
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+tungJ -- 2018-11-25 21:33
+--------------------------------------------------------------
+UPDATED: design.pdf
+
+Added abstract which defines our project more deeply and the relevant information being implemented.
+Updated sitemap to include an arrow which shows that you can return to the homepage from the content page.
+Redistributed tasks.
+
+Group is currently coming up with timeline.
+==============================================================
+
+tungJ -- 2018-11-20 13:57
+--------------------------------------------------------------
+Decided to go w/ BNi's idea for an almanac.
+Assorted informations and trivia about certain places with weird misc. stuff--sort of like a news paper.
+SEE: design.pdf
+==============================================================
+
+vincentC -- 2018-11-19 13:57
+--------------------------------------------------------------
+Brainstormed possible project ideas, ended with Food APIs:
+https://www.food2fork.com/about/api
+https://open.fda.gov/apis/food/enforcement/
+
+Website will take a search query and find it in the Food2Fork API.
+Matching information is presented in a table on the website. Provide
+information on the foods using another API (? TBD)
+==============================================================
+
+vincentC -- 2018-11-25 23:30
+--------------------------------------------------------------
+Added draft(?) timeline to the design PDF.

@@ -5,9 +5,6 @@ def decode(apiname):
 	for i in range(len(k)):
 		try:
 			t = int(k[i])
-			if t >= 5:
-				k[i] = str(t - 5)
-			else:
-				k[i] = str(t + 5)
+			k[i] = str((t + 5) % 10)
 		except:
 			k[i] = k[i].toupper()
