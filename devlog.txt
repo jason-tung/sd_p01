@@ -24,6 +24,8 @@ Project Almanac - weather, news, poetry, and anything else applicable
 tungJ -- 2018-11-26 13:55
 --------------------------------------------------------------
 Added organized method to grab all keys wtihout saving them in our github.
+Reorganized work distribution again.
+Swapped ipstack to ipapi (prett much the same information, but bni used ipapi before)
 ==============================================================
 
 tungJ -- 2018-11-25 21:33
