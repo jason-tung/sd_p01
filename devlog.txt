@@ -21,12 +21,25 @@ Project Almanac - weather, news, poetry, and anything else applicable
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 
+chiV -- 2018-11-27 8:01
+--------------------------------------------------------------
+design.pdf changes:
+Fixed timeline to be more accurately represented.
+Added front end framework to be easily distinguishable.
+==============================================================
+
 tungJ -- 2018-11-26 13:55
 --------------------------------------------------------------
 Added organized method to grab all keys wtihout saving them in our github.
 Reorganized work distribution again.
 Swapped ipstack to ipapi (prett much the same information, but bni used ipapi before)
 Added timeline
+==============================================================
+
+chiV -- 2018-11-25 23:30
+--------------------------------------------------------------
+design.pdf changes:
+Added draft(?) timeline to the design PDF.
 ==============================================================
 
 tungJ -- 2018-11-25 21:33
@@ -56,17 +69,4 @@ https://open.fda.gov/apis/food/enforcement/
 Website will take a search query and find it in the Food2Fork API.
 Matching information is presented in a table on the website. Provide
 information on the foods using another API (? TBD)
-==============================================================
-
-chiV -- 2018-11-25 23:30
---------------------------------------------------------------
-design.pdf changes:
-Added draft(?) timeline to the design PDF.
-==============================================================
-
-chiV -- 2018-11-27 8:01
---------------------------------------------------------------
-design.pdf changes:
-Fixed timeline to be more accurately represented.
-Added front end framework to be easily distinguishable.
 ==============================================================
