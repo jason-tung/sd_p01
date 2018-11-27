@@ -47,7 +47,7 @@ Assorted informations and trivia about certain places with weird misc. stuff--so
 SEE: design.pdf
 ==============================================================
 
-vincentC -- 2018-11-19 13:57
+chiV -- 2018-11-19 13:57
 --------------------------------------------------------------
 Brainstormed possible project ideas, ended with Food APIs:
 https://www.food2fork.com/about/api
@@ -58,6 +58,15 @@ Matching information is presented in a table on the website. Provide
 information on the foods using another API (? TBD)
 ==============================================================
 
-vincentC -- 2018-11-25 23:30
+chiV -- 2018-11-25 23:30
 --------------------------------------------------------------
+design.pdf changes:
 Added draft(?) timeline to the design PDF.
+==============================================================
+
+chiV -- 2018-11-27 8:01
+--------------------------------------------------------------
+design.pdf changes:
+Fixed timeline to be more accurately represented.
+Added front end framework to be easily distinguishable.
+==============================================================
