@@ -73,9 +73,10 @@ Added front end framework to be easily distinguishable.
 Created bootstrap base and began the landing page (index.html)
 ==============================================================
 
-fristL -- TIMESTAMP
+jasonT -- 2018-11-28 13:06
 --------------------------------------------------------------
-<Thing fristL did.>
+Added new api (nasa api) to the design doc
+Used to fetch pictures of locations
 ==============================================================
 fristL -- TIMESTAMP
 --------------------------------------------------------------
