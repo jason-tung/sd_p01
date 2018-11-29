@@ -24,27 +24,8 @@ key_loc = "http://homer.stuy.edu/~jtung/sd_keys/p01.json"
 @app.route('/')
 def hello_world():
     my_dict = load(key_loc)
-    #for k,v in my_dict.items():
-        #print (k,v)
-    #--------------------------------------ip api here--------------------------------------
-    ipd = load("https://ipapi.co/json")
 
-    #--------------------------------------nasa imaging here
-    url = "https://api.nasa.gov/planetary/earth/imagery/?"
-    data = {}
-    data["lon"] = str(ipd["longitude"])
-    data["lat"] = str(ipd["latitude"])
-    data["dim"] = "0.2"
-    data["cloud_score"] = "True"
-    data["api_key"] = my_dict["nasa"]
-    url+=parse.urlencode(data)
-    nasad = load(url)
-    #print(url)
-    """
-    return render_template("test.html",hello = nasad["url"])
-    """
-
-    #--------------------------------------time/date--------------------------------------
+    # time/date
 
     requrl = "https://www.calendarindex.com/api/v1/holidays/json?"
     data = {}
@@ -56,7 +37,7 @@ def hello_world():
     requrl += parse.urlencode(data)
     d = load_bypass(requrl)
 
-    #--------------------------------------news--------------------------------------
+    # news
 
     requrl = "https://newsapi.org/v2/top-headlines?"
     data = {}
@@ -71,14 +52,14 @@ def hello_world():
     for i in range(10):
         newsarticles.append([d["articles"][i]["url"], d["articles"][i]["title"], d["articles"][i]["content"]])
 
-    #--------------------------------------location--------------------------------------
+    # location
 
     requrl = "https://ipapi.co/json/"
     d = load(requrl)
     lon = d["longitude"]
     lat = d["latitude"]
 
-    #--------------------------------------weather--------------------------------------
+    # weather
 
     requrl = "https://api.darksky.net/forecast/" + my_dict["darksky"] + "/" + str(lat) + "," + str(lon)
     d = load(requrl)
@@ -90,7 +71,7 @@ def hello_world():
     currentweather = d["minutely"]["summary"]
     weekweather = d["daily"]["summary"]
 
-    #--------------------------------------sunrise/sunset (today)--------------------------------------
+    # sunrise/sunset (today)
 
     requrl = "https://api.sunrise-sunset.org/json?"
     data = {}
@@ -106,7 +87,7 @@ def hello_world():
     srisetoday = d["results"]["sunrise"]
     ssettoday = d["results"]["sunset"]
 
-    #--------------------------------------sunrise/sunset (tomorrow)--------------------------------------
+    # sunrise/sunset (tomorrow)
 
     requrl = "https://api.sunrise-sunset.org/json?"
     data = {}
@@ -122,15 +103,28 @@ def hello_world():
     srisetmw = d["results"]["sunrise"]
     ssettmw = d["results"]["sunset"]
 
+    # nasa imaging
+
+    requrl = "https://api.nasa.gov/planetary/earth/imagery/?"
+    data = {}
+    data["lon"] = lon
+    data["lat"] = lat
+    data["dim"] = "0.2"
+    data["api_key"] = my_dict["nasa"]
+    requrl += parse.urlencode(data)
+    d = load(requrl)
+
+    nasaimg = d["url"]
+
     return render_template("index.html",title="project almanac")
 
-    #--------------------------------------poems--------------------------------------
+    # poems
     #requrl = "https://www.poemist.com/api/v1/randompoems"
     #d.load(requrl)
 
-    #title = d[02]["title"]
-    #poet = d[02]["poet"]["name"]
-    #content = d[02]["content"]
+    #title = d[1]["title"]
+    #poet = d[1]["poet"]["name"]
+    #content = d[1]["content"]
 
 if __name__ == "__main__":
     app.debug = True
