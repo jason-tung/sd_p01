@@ -3,6 +3,8 @@ import random
 import datetime
 
 from urllib import request, parse, error
+from urllib.request import Request, urlopen
+
 
 from flask import Flask, render_template, jsonify
 
@@ -10,6 +12,12 @@ app = Flask(__name__)
 
 def load(thing):
     return json.loads(request.urlopen(thing).read())
+
+def load_bypass(thing):
+    req = Request(thing,headers={'User-Agent': 'Mozilla/5.0'})
+    webpage = urlopen(req).read()
+    return webpage
+
 
 key_loc = "http://homer.stuy.edu/~jtung/sd_keys/p01.json"
 
@@ -31,25 +39,22 @@ def hello_world():
     data["api_key"] = my_dict["nasa"]
     url+=parse.urlencode(data)
     nasad = load(url)
-    print(url)
+    #print(url)
     """
     return render_template("test.html",hello = nasad["url"])
     """
 
     #--------------------------------------time/date--------------------------------------
 
-    # requrl = "https://www.calendarindex.com/api/v1/holidays/json?"
-    # data = {}
-    # data["country"] = "US"
-    # data["year"] = "2018"
-    # data["state"] = "NY"
-    # data["api_key"] = my_dict["calendarindex"]
+    requrl = "https://www.calendarindex.com/api/v1/holidays/json?"
+    data = {}
+    data["country"] = "US"
+    data["year"] = "2018"
+    data["state"] = "NY"
+    data["api_key"] = my_dict["calendarindex"]
 
-    # requrl += parse.urlencode(data)
-
-    # d = load(requrl)
-
-    # print(d)
+    requrl += parse.urlencode(data)
+    d = load_bypass(requrl)
 
     #--------------------------------------news--------------------------------------
 
@@ -119,7 +124,7 @@ def hello_world():
 
     return render_template("index.html",title="project almanac")
 
-
+    #--------------------------------------poems--------------------------------------
     #requrl = "https://www.poemist.com/api/v1/randompoems"
     #d.load(requrl)
 
