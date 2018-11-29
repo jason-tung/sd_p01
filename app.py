@@ -18,10 +18,10 @@ def hello_world():
     my_dict = load(key_loc)
     #for k,v in my_dict.items():
         #print (k,v)
-    #ip api here
+    #--------------------------------------ip api here--------------------------------------
     ipd = load("https://ipapi.co/json")
 
-    #nasa imaging here
+    #--------------------------------------nasa imaging here
     url = "https://api.nasa.gov/planetary/earth/imagery/?"
     data = {}
     data["lon"] = str(ipd["longitude"])
@@ -36,7 +36,7 @@ def hello_world():
     return render_template("test.html",hello = nasad["url"])
     """
 
-    # time/date
+    #--------------------------------------time/date--------------------------------------
 
     # requrl = "https://www.calendarindex.com/api/v1/holidays/json?"
     # data = {}
@@ -51,7 +51,7 @@ def hello_world():
 
     # print(d)
 
-    # news
+    #--------------------------------------news--------------------------------------
 
     requrl = "https://newsapi.org/v2/top-headlines?"
     data = {}
@@ -66,14 +66,14 @@ def hello_world():
     for i in range(10):
         newsarticles.append([d["articles"][i]["url"], d["articles"][i]["title"], d["articles"][i]["content"]])
 
-    # location
+    #--------------------------------------location--------------------------------------
 
     requrl = "https://ipapi.co/json/"
     d = load(requrl)
     lon = d["longitude"]
     lat = d["latitude"]
 
-    # weather
+    #--------------------------------------weather--------------------------------------
 
     requrl = "https://api.darksky.net/forecast/" + my_dict["darksky"] + "/" + str(lat) + "," + str(lon)
     d = load(requrl)
@@ -85,7 +85,7 @@ def hello_world():
     currentweather = d["minutely"]["summary"]
     weekweather = d["daily"]["summary"]
 
-    # sunrise/sunset (today)
+    #--------------------------------------sunrise/sunset (today)--------------------------------------
 
     requrl = "https://api.sunrise-sunset.org/json?"
     data = {}
@@ -101,7 +101,7 @@ def hello_world():
     srisetoday = d["results"]["sunrise"]
     ssettoday = d["results"]["sunset"]
 
-    # sunrise/sunset (tomorrow)
+    #--------------------------------------sunrise/sunset (tomorrow)--------------------------------------
 
     requrl = "https://api.sunrise-sunset.org/json?"
     data = {}
@@ -117,7 +117,7 @@ def hello_world():
     srisetmw = d["results"]["sunrise"]
     ssettmw = d["results"]["sunset"]
 
-    return render_template("index.html",title="project almanac")\
+    return render_template("index.html",title="project almanac")
 
 
     #requrl = "https://www.poemist.com/api/v1/randompoems"
