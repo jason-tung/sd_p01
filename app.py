@@ -119,6 +119,14 @@ def hello_world():
 
     return render_template("index.html",title="project almanac")\
 
+
+    #requrl = "https://www.poemist.com/api/v1/randompoems"
+    #d.load(requrl)
+
+    #title = data[02]["title"]
+    #poetdata = data[02]["poet"]["name"]
+    #contentdata = data[02]["content"]
+
 if __name__ == "__main__":
     app.debug = True
     app.run()
