@@ -80,8 +80,8 @@ def hello_world():
 
     weatheralerts = []
     if "alerts" in d.keys():
-    	for alert in d["alerts"]:
-    		weatheralerts.append([alert["title"], alert["uri"]])
+        for alert in d["alerts"]:
+            weatheralerts.append([alert["title"], alert["uri"]])
     currentweather = d["minutely"]["summary"]
     weekweather = d["daily"]["summary"]
 
