@@ -62,13 +62,7 @@ design.pdf changes:
 Fixed timeline to be more accurately represented.
 Added front end framework to be easily distinguishable.
 ==============================================================
-vincentC -- 2018-11-27 8:01
---------------------------------------------------------------
-design.pdf changes:
-Fixed timeline to be more accurately represented.
-Added front end framework to be easily distinguishable.
-==============================================================
- weiwenZ -- 2018-11-27 14:07
+weiwenZ -- 2018-11-27 14:07
 --------------------------------------------------------------
 Created bootstrap base and began the landing page (index.html)
 ==============================================================
@@ -77,6 +71,10 @@ jasonT -- 2018-11-28 13:06
 --------------------------------------------------------------
 Added new api (nasa api) to the design doc
 Used to fetch pictures of locations
+==============================================================
+vincentC -- 2018-11-29 8:01
+--------------------------------------------------------------
+Random poem API implementation in app.py
 ==============================================================
 fristL -- TIMESTAMP
 --------------------------------------------------------------
