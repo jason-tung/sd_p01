@@ -76,9 +76,10 @@ vincentC -- 2018-11-29 8:01
 --------------------------------------------------------------
 Random poem API implementation in app.py
 ==============================================================
-fristL -- TIMESTAMP
+billN -- 2018-11-29 1:38
 --------------------------------------------------------------
-<Thing fristL did.>
+Implemented ipapi to find location, sunrise-sunset for sunrise/sunset times, darksky for weather, and news api for news
+Refactored nasa implementation
 ==============================================================
 fristL -- TIMESTAMP
 --------------------------------------------------------------
