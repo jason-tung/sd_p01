@@ -32,7 +32,7 @@ def hello_world():
     url+=parse.urlencode(data)
     nasad = load(url)
     print(url)
-"""
+    """
     return render_template("test.html",hello = nasad["url"])
     """
 
