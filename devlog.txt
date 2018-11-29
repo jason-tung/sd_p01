@@ -10,63 +10,115 @@ pd 8
 Project Almanac - weather, news, poetry, and anything else applicable
 
 
- ______   ______   __   __   __       ______   _______     
-/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\    
-\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__  
- \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\ 
-  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/ 
-   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \ 
-    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/ 
+ ______   ______   __   __   __       ______   _______
+/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\
+  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/
+   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \
+    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 
-chiV -- 2018-11-27 8:01
+jasonT -- 2018-11-19 13:57
+--------------------------------------------------------------
+Brainstormed possible project ideas, ended with Food APIs:
+https://www.food2fork.com/about/api
+https://open.fda.gov/apis/food/enforcement/
+Website will take a search query and find it in the Food2Fork API.
+Matching information is presented in a table on the website. Provide
+information on the foods using another API (? TBD)
+==============================================================
+jasonT -- 2018-11-20 13:57
+--------------------------------------------------------------
+Decided to go w/ BNi's idea for an almanac.
+Assorted informations and trivia about certain places with weird misc. stuff--sort of like a news paper.
+SEE: design.pdf
+==============================================================
+jasonT -- 2018-11-25 21:33
+--------------------------------------------------------------
+UPDATED: design.pdf
+Added abstract which defines our project more deeply and the relevant information being implemented.
+Updated sitemap to include an arrow which shows that you can return to the homepage from the content page.
+Redistributed tasks.
+Group is currently coming up with timeline.
+==============================================================
+vincentC -- 2018-11-25 23:30
 --------------------------------------------------------------
 design.pdf changes:
-Fixed timeline to be more accurately represented.
-Added front end framework to be easily distinguishable.
+Added draft(?) timeline to the design PDF.
 ==============================================================
-
-tungJ -- 2018-11-26 13:55
+jasonT -- 2018-11-26 13:55
 --------------------------------------------------------------
 Added organized method to grab all keys wtihout saving them in our github.
 Reorganized work distribution again.
 Swapped ipstack to ipapi (prett much the same information, but bni used ipapi before)
 Added timeline
 ==============================================================
-
-chiV -- 2018-11-25 23:30
+vincentC -- 2018-11-27 8:01
 --------------------------------------------------------------
 design.pdf changes:
-Added draft(?) timeline to the design PDF.
+Fixed timeline to be more accurately represented.
+Added front end framework to be easily distinguishable.
+==============================================================
+vincentC -- 2018-11-27 8:01
+--------------------------------------------------------------
+design.pdf changes:
+Fixed timeline to be more accurately represented.
+Added front end framework to be easily distinguishable.
+==============================================================
+ weiwenZ -- 2018-11-27 14:07
+--------------------------------------------------------------
+Created bootstrap base and began the landing page (index.html)
 ==============================================================
 
-tungJ -- 2018-11-25 21:33
+jasonT -- 2018-11-28 13:06
 --------------------------------------------------------------
-UPDATED: design.pdf
-
-Added abstract which defines our project more deeply and the relevant information being implemented.
-Updated sitemap to include an arrow which shows that you can return to the homepage from the content page.
-Redistributed tasks.
-
-Group is currently coming up with timeline.
+Added new api (nasa api) to the design doc
+Used to fetch pictures of locations
 ==============================================================
-
-tungJ -- 2018-11-20 13:57
+fristL -- TIMESTAMP
 --------------------------------------------------------------
-Decided to go w/ BNi's idea for an almanac.
-Assorted informations and trivia about certain places with weird misc. stuff--sort of like a news paper.
-SEE: design.pdf
+<Thing fristL did.>
 ==============================================================
-
-chiV -- 2018-11-19 13:57
+fristL -- TIMESTAMP
 --------------------------------------------------------------
-Brainstormed possible project ideas, ended with Food APIs:
-https://www.food2fork.com/about/api
-https://open.fda.gov/apis/food/enforcement/
-
-Website will take a search query and find it in the Food2Fork API.
-Matching information is presented in a table on the website. Provide
-information on the foods using another API (? TBD)
+<Thing fristL did.>
+==============================================================
+fristL -- TIMESTAMP
+--------------------------------------------------------------
+<Thing fristL did.>
+==============================================================
+fristL -- TIMESTAMP
+--------------------------------------------------------------
+<Thing fristL did.>
+==============================================================
+fristL -- TIMESTAMP
+--------------------------------------------------------------
+<Thing fristL did.>
+==============================================================
+fristL -- TIMESTAMP
+--------------------------------------------------------------
+<Thing fristL did.>
+==============================================================
+fristL -- TIMESTAMP
+--------------------------------------------------------------
+<Thing fristL did.>
+==============================================================
+fristL -- TIMESTAMP
+--------------------------------------------------------------
+<Thing fristL did.>
+==============================================================
+fristL -- TIMESTAMP
+--------------------------------------------------------------
+<Thing fristL did.>
+==============================================================
+fristL -- TIMESTAMP
+--------------------------------------------------------------
+<Thing fristL did.>
+==============================================================
+fristL -- TIMESTAMP
+--------------------------------------------------------------
+<Thing fristL did.>
 ==============================================================
