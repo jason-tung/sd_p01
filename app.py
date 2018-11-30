@@ -13,7 +13,7 @@ def load(thing):
 def load_bypass(thing):
     req = Request(thing,headers={'User-Agent': 'Mozilla/5.0'})
     webpage = urlopen(req).read()
-    return webpage
+    return json.loads(webpage)
 
 
 key_loc = "http://homer.stuy.edu/~jtung/sd_keys/p01.json"
@@ -41,7 +41,7 @@ def hello_world():
 
     # news
 
-    requrl = "https://newsapi.org/v2/top-headlines?"
+    r equrl = "https://newsapi.org/v2/top-headlines?"
     data = {}
     data["country"] = "us"
     data["apiKey"] = my_dict["newsapi"]
