@@ -56,7 +56,7 @@ Reorganized work distribution again.
 Swapped ipstack to ipapi (prett much the same information, but bni used ipapi before)
 Added timeline
 ==============================================================
-vincentC -- 2018-11-27 8:01
+vincentC -- 2018-11-27 08:01
 --------------------------------------------------------------
 design.pdf changes:
 Fixed timeline to be more accurately represented.
@@ -76,14 +76,15 @@ vincentC -- 2018-11-29 8:01
 --------------------------------------------------------------
 Random poem API implementation in app.py
 ==============================================================
-billN -- 2018-11-29 1:38
+billN -- 2018-11-29 13:38
 --------------------------------------------------------------
 Implemented ipapi to find location, sunrise-sunset for sunrise/sunset times, darksky for weather, and news api for news
 Refactored nasa implementation
 ==============================================================
-fristL -- TIMESTAMP
+jasonT -- 2018-11-30 13:58
 --------------------------------------------------------------
-<Thing fristL did.>
+Access to datetime module approved. 
+Reformatted import statements.
 ==============================================================
 fristL -- TIMESTAMP
 --------------------------------------------------------------
