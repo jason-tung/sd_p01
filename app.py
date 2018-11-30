@@ -32,7 +32,12 @@ def hello_world():
     data["api_key"] = my_dict["calendarindex"]
 
     requrl += parse.urlencode(data)
-    d = load_bypass(requrl)
+
+    try:
+        d = load_bypass(requrl)
+        holidays = d["response"]["holidays"]
+    except:
+        holidays = None
 
     # news
 
@@ -43,30 +48,41 @@ def hello_world():
 
     requrl += parse.urlencode(data)
 
-    d = load(requrl)
-
-    newsarticles = []
-    for i in range(10):
-        newsarticles.append([d["articles"][i]["url"], d["articles"][i]["title"], d["articles"][i]["content"]])
+    try:
+        d = load(requrl)
+        newsarticles = []
+        for i in range(10):
+            newsarticles.append([d["articles"][i]["url"], d["articles"][i]["title"], d["articles"][i]["content"]])
+    except:
+        newsarticles = None
 
     # location
 
     requrl = "https://ipapi.co/json/"
-    d = load(requrl)
-    lon = d["longitude"]
-    lat = d["latitude"]
+    try:
+        d = load(requrl)
+        lon = d["longitude"]
+        lat = d["latitude"]
+    except:
+        lon = 0
+        lat = 0
 
     # weather
 
     requrl = "https://api.darksky.net/forecast/" + my_dict["darksky"] + "/" + str(lat) + "," + str(lon)
-    d = load(requrl)
 
-    weatheralerts = []
-    if "alerts" in d.keys():
-        for alert in d["alerts"]:
-            weatheralerts.append([alert["title"], alert["uri"]])
-    currentweather = d["minutely"]["summary"]
-    weekweather = d["daily"]["summary"]
+    try:
+        d = load(requrl)
+        weatheralerts = []
+        if "alerts" in d.keys():
+            for alert in d["alerts"]:
+                weatheralerts.append([alert["title"], alert["uri"]])
+        currentweather = d["minutely"]["summary"]
+        weekweather = d["daily"]["summary"]
+    except:
+        weatheralerts = None
+        currentweather = None
+        weekweather = None
 
     # sunrise/sunset (today)
 
@@ -79,10 +95,13 @@ def hello_world():
 
     requrl += parse.urlencode(data)
 
-    d = load(requrl)
-
-    srisetoday = d["results"]["sunrise"]
-    ssettoday = d["results"]["sunset"]
+    try:
+        d = load(requrl)
+        srisetoday = d["results"]["sunrise"]
+        ssettoday = d["results"]["sunset"]
+    except:
+        srisetoday = None
+        ssettoday = None
 
     # sunrise/sunset (tomorrow)
 
@@ -95,10 +114,13 @@ def hello_world():
 
     requrl += parse.urlencode(data)
 
-    d = load(requrl)
-
-    srisetmw = d["results"]["sunrise"]
-    ssettmw = d["results"]["sunset"]
+    try:
+        d = load(requrl)
+        srisetmw = d["results"]["sunrise"]
+        ssettmw = d["results"]["sunset"]
+    except:
+        srisetmw = None
+        ssettmw = None
 
     # nasa imaging
 
@@ -109,9 +131,11 @@ def hello_world():
     data["dim"] = "0.2"
     data["api_key"] = my_dict["nasa"]
     requrl += parse.urlencode(data)
-    d = load(requrl)
-
-    nasaimg = d["url"]
+    try:
+        d = load(requrl)
+        nasaimg = d["url"]
+    except:
+        nasaimg = None
 
     return render_template("index.html",title="project almanac")
 
