@@ -137,6 +137,13 @@ def hello_world():
     except:
         nasaimg = None
 
+    # horoscope
+    requrl = "https://json.astrologyapi.com/v1/western_horoscope"
+    data = {}
+    data["userId"] = my_dict["astrologyapi"]["user"]
+    data["apiKey"] = my_dict["astrologyapi"]["key"]
+    data["data"] = {"date": datetime.date.today(), "month" = }
+
     return render_template("index.html",title="project almanac")
 
     # poems
