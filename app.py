@@ -41,7 +41,7 @@ def hello_world():
 
     # news
 
-    r equrl = "https://newsapi.org/v2/top-headlines?"
+    requrl = "https://newsapi.org/v2/top-headlines?"
     data = {}
     data["country"] = "us"
     data["apiKey"] = my_dict["newsapi"]
@@ -136,13 +136,6 @@ def hello_world():
         nasaimg = d["url"]
     except:
         nasaimg = None
-
-    # horoscope
-    requrl = "https://json.astrologyapi.com/v1/western_horoscope"
-    data = {}
-    data["userId"] = my_dict["astrologyapi"]["user"]
-    data["apiKey"] = my_dict["astrologyapi"]["key"]
-    data["data"] = {"date": datetime.date.today(), "month" = }
 
     return render_template("index.html",title="project almanac")
 
