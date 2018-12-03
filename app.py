@@ -138,13 +138,22 @@ def hello_world():
         nasaimg = None
 
     # horoscope
-    requrl = "https://json.astrologyapi.com/v1/western_horoscope"
-    data = {}
-    data["userId"] = my_dict["astrologyapi"]["user"]
-    data["apiKey"] = my_dict["astrologyapi"]["key"]
-    data["data"] = {"date": datetime.date.today(), "month" = }
+    
 
-    return render_template("index.html",title="project almanac")
+    # place all api data into a dict
+
+    d = {}
+    d["holidays"] = holidays
+    d["newsarticles"] = newsarticles
+    d["currentweather"] = currentweather
+    d["weekweather"] = weekweather
+    d["srisetoday"] = srisetoday
+    d["ssettoday"] = ssettoday
+    d["srisetmw"] = srisetmw
+    d["ssettmw"] = ssettmw
+    d["nasaimg"] = nasaimg
+
+    return render_template("index.html",title="project almanac",dctnary=d)
 
     # poems
     #requrl = "https://www.poemist.com/api/v1/randompoems"
