@@ -41,7 +41,7 @@ def hello_world():
 
     # news
 
-    r equrl = "https://newsapi.org/v2/top-headlines?"
+    requrl = "https://newsapi.org/v2/top-headlines?"
     data = {}
     data["country"] = "us"
     data["apiKey"] = my_dict["newsapi"]
