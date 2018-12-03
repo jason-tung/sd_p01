@@ -41,7 +41,7 @@ def hello_world():
 
     # news
 
-    requrl = "https://newsapi.org/v2/top-headlines?"
+    r equrl = "https://newsapi.org/v2/top-headlines?"
     data = {}
     data["country"] = "us"
     data["apiKey"] = my_dict["newsapi"]
@@ -138,22 +138,13 @@ def hello_world():
         nasaimg = None
 
     # horoscope
-    
+    requrl = "https://json.astrologyapi.com/v1/western_horoscope"
+    data = {}
+    data["userId"] = my_dict["astrologyapi"]["user"]
+    data["apiKey"] = my_dict["astrologyapi"]["key"]
+    data["data"] = {"date": datetime.date.today(), "month" = }
 
-    # place all api data into a dict
-
-    d = {}
-    d["holidays"] = holidays
-    d["newsarticles"] = newsarticles
-    d["currentweather"] = currentweather
-    d["weekweather"] = weekweather
-    d["srisetoday"] = srisetoday
-    d["ssettoday"] = ssettoday
-    d["srisetmw"] = srisetmw
-    d["ssettmw"] = ssettmw
-    d["nasaimg"] = nasaimg
-
-    return render_template("index.html",title="project almanac",dctnary=d)
+    return render_template("index.html",title="project almanac")
 
     # poems
     #requrl = "https://www.poemist.com/api/v1/randompoems"
@@ -162,6 +153,41 @@ def hello_world():
     #title = d[1]["title"]
     #poet = d[1]["poet"]["name"]
     #content = d[1]["content"]
+
+@app.route('/horoscope')
+def dayweekmonth():
+    d = {}
+    ss = request.args['sunsign']
+
+    requrl = "http://horoscope-api.herokuapp.com/horoscope/today/" + ss
+    try:
+        today = load(requrl)
+    except:
+        today = None
+
+    d["today"] = today["horoscope"]
+    requrl = "http://horoscope-api.herokuapp.com/horoscope/week/" + ss
+    try:
+        week = load(requrl)
+    except:
+        week = None
+
+    d["week"] = week["horoscope"]
+    requrl = "http://horoscope-api.herokuapp.com/horoscope/month/" + ss
+    try:
+        month = load(requrl)
+    except:
+        month = None
+
+    d["month"] = month["horoscope"]
+    requrl = "http://horoscope-api.herokuapp.com/horoscope/year/" + ss
+    try:
+        year = load(requrl)
+    except:
+        year = None
+
+    d["year"] = year["horoscope"]
+
 
 if __name__ == "__main__":
     app.debug = True
