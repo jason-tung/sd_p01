@@ -86,9 +86,9 @@ Access to datetime module approved.
 Reformatted import statements.
 Fixed load_bypass.
 ==============================================================
-fristL -- TIMESTAMP
+jasonT -- 2018-12-03 13:29
 --------------------------------------------------------------
-<Thing fristL did.>
+Replaced horoscope api with an easier to use version
 ==============================================================
 fristL -- TIMESTAMP
 --------------------------------------------------------------
