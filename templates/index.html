@@ -3,9 +3,32 @@
 {% block body %}
 <h1> Project Almanac </h1>
 
-{% for line in content %}
-{{ line }}: {{ content[line] }}<br>
-<hr>
+<a href="/horoscope"> Click here for horoscope </a> <br> <hr>
+{% for line in dctnary %}
+    {% if line in "nasaimg" %}
+        <img src="{{ dctnary[line] }}" alt="An image of your current location">
+    {% elif line in "holidays" %}
+        <p> Name: Date <br>
+        {% for day in dctnary["holidays"] %}
+            {{ day["name"] }} : {{ day["date"][:10]}}
+            <br>
+        {% endfor %}
+        </p>
+    {% elif line in "newsarticles" %}
+        <p> Title: Content <br>
+            {% for article in dctnary["holidays"] %}
+                <a href="{{ }}"
+                {{ ["name"] }} : {{ day["date"][:10]}}
+                <br>
+            {% endfor %}
+    {% else %}
+        {{ line }}: {{ dctnary[line] }}
+        <br>
+
+
+    {% endif %}
+    <hr>
 {% endfor %}
+
 
 {% endblock %}
