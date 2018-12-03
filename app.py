@@ -1,8 +1,8 @@
 import json
 import datetime
-
 from urllib import request, parse, error
 from urllib.request import Request, urlopen
+
 from flask import Flask, render_template, jsonify, flash
 
 app = Flask(__name__)
@@ -137,8 +137,17 @@ def hello_world():
     except:
         nasaimg = None
 
-    # horoscope
-    
+    # poems
+
+    requrl = "https://www.poemist.com/api/v1/randompoems"
+    try:
+        d.load(requrl)
+
+        poems = []
+        for poem in d:
+            poems.append({"title":poem["title"], "poet":poem["poet"]["name"], "poem":poem["content"]})
+    except:
+        poems = None
 
     # place all api data into a dict
 
@@ -152,16 +161,46 @@ def hello_world():
     d["srisetmw"] = srisetmw
     d["ssettmw"] = ssettmw
     d["nasaimg"] = nasaimg
+    d["poems"] = poems
 
-    return render_template("index.html",title="project almanac",dctnary=d)
+    return render_template("index.html",title="project almanac", dctnary=d)
 
-    # poems
-    #requrl = "https://www.poemist.com/api/v1/randompoems"
-    #d.load(requrl)
+    
 
-    #title = d[1]["title"]
-    #poet = d[1]["poet"]["name"]
-    #content = d[1]["content"]
+@app.route('/horoscope')
+def dayweekmonth():
+    d = {}
+    ss = request.args['sunsign']
+
+    requrl = "http://horoscope-api.herokuapp.com/horoscope/today/" + ss
+    try:
+        today = load(requrl)
+    except:
+        today = None
+
+    d["today"] = today["horoscope"]
+    requrl = "http://horoscope-api.herokuapp.com/horoscope/week/" + ss
+    try:
+        week = load(requrl)
+    except:
+        week = None
+
+    d["week"] = week["horoscope"]
+    requrl = "http://horoscope-api.herokuapp.com/horoscope/month/" + ss
+    try:
+        month = load(requrl)
+    except:
+        month = None
+
+    d["month"] = month["horoscope"]
+    requrl = "http://horoscope-api.herokuapp.com/horoscope/year/" + ss
+    try:
+        year = load(requrl)
+    except:
+        year = None
+
+    d["year"] = year["horoscope"]
+
 
 if __name__ == "__main__":
     app.debug = True
