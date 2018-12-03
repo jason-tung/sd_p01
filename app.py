@@ -138,6 +138,18 @@ def hello_world():
     except:
         nasaimg = None
 
+    # poems
+
+    requrl = "https://www.poemist.com/api/v1/randompoems"
+    try:
+        d.load(requrl)
+
+        poems = []
+        for poem in d:
+            poems.append({"title":poem["title"], "poet":poem["poet"]["name"], "poem":poem["content"]})
+    except:
+        poems = None
+
     # place all api data into a dict
 
     d = {}
@@ -150,16 +162,11 @@ def hello_world():
     d["srisetmw"] = srisetmw
     d["ssettmw"] = ssettmw
     d["nasaimg"] = nasaimg
+    d["poems"] = poems
 
     return render_template("index.html",title="project almanac", dctnary=d)
 
-    # poems
-    #requrl = "https://www.poemist.com/api/v1/randompoems"
-    #d.load(requrl)
-
-    #title = d[1]["title"]
-    #poet = d[1]["poet"]["name"]
-    #content = d[1]["content"]
+    
 
 @app.route('/horoscope')
 def dayweekmonth():
