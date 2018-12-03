@@ -1,9 +1,8 @@
-
 import json
 import datetime
-
 from urllib import request, parse, error
 from urllib.request import Request, urlopen
+
 from flask import Flask, render_template, jsonify, flash
 
 app = Flask(__name__)
