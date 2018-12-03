@@ -1,3 +1,4 @@
+
 import json
 import datetime
 
@@ -137,7 +138,20 @@ def hello_world():
     except:
         nasaimg = None
 
-    return render_template("index.html",title="project almanac")
+    # place all api data into a dict
+
+    d = {}
+    d["holidays"] = holidays
+    d["newsarticles"] = newsarticles
+    d["currentweather"] = currentweather
+    d["weekweather"] = weekweather
+    d["srisetoday"] = srisetoday
+    d["ssettoday"] = ssettoday
+    d["srisetmw"] = srisetmw
+    d["ssettmw"] = ssettmw
+    d["nasaimg"] = nasaimg
+
+    return render_template("index.html",title="project almanac", dctnary=d)
 
     # poems
     #requrl = "https://www.poemist.com/api/v1/randompoems"
