@@ -46,7 +46,8 @@ pip3 install -r requirements.txt
 
 ### Instructions:
 1. Clone the repo
-** ssh **
+
+**ssh**
 ```
 git clone git@github.com:jason-tung/sd_p01.git
 ```
@@ -77,10 +78,6 @@ pip3 install -r requirements.txt
 ```
 
 6. run the app.py with python3
-**python 2.7**
-```
-python app.py
-```
 
 **python 3.7**
 ```
