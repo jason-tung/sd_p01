@@ -24,30 +24,68 @@ api | description
 
 ### Dependencies: 
 Our dependencies, as listed in requirements.txt, are as follows:
+
 dependency | version | origin | description
 --- | --- | --- | ---
-Click | 7.0 | Flask | tbd
-Flask | 1.0.2 | Flask |  tbd
-itsdangerous | 1.1.0 | Flask |  tbd
-Jinja2 | 2.10 | Flask |  tbd
-MarkupSafe | 1.1.0 | Flask |  tbd
-Werkzeug | 0.14.1 | Flask |  tbd
-json | n/a | python standard lib |  tbd
-datetime | n/a | python standard lib |  tbd
-urllib | n/a | python standard lib |  tbd
-urllib.request | n/a | python standard lib |  tbd
+Click | 7.0 | Flask | unused
+Flask | 1.0.2 | Flask |  microframework of choice
+itsdangerous | 1.1.0 | Flask |  unused
+Jinja2 | 2.10 | Flask |  templating language
+MarkupSafe | 1.1.0 | Flask |  unused
+Werkzeug | 0.14.1 | Flask |  unused
+json | n/a | py3.7.1-stdlib |  converts json strings into python dictionaries and vice-versa
+datetime | n/a | py3.7.1-stdlib | fetches current date and time
+urllib | n/a | py3.7.1-stdlib |  fetches json data from urls
+urllib.request | n/a | py3.7.1-stdlib |  fetches json data from urls
 
 
 Install our dependencies with the follow command in the root directory of our repo:
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ### Instructions:
+1. Clone the repo
+** ssh **
+```
+git clone git@github.com:jason-tung/sd_p01.git
+```
 
+** https **
+```
+git clone https://github.com/jason-tung/sd_p01.git
+```
 
-Include clear instructions on how to run your project. (Including how to procure API keys, with hyperlinks...)
-Assume your audience is cloning your repo and running from localhost.
-List dependencies
-...as well as how to install/procure them,
-and a brief explanation of what each one does / how your app utilizes it.
+2. (optional) make a virutal env
+```
+python3 -m venv <venv_name>
+```
+
+3. (optional) activate virtual env
+```
+. <path-to-venv>/bin/activate
+```
+
+4. enter the repo directory
+```
+cd <path-to-repo>
+```
+
+5. install requirements
+```
+pip3 install -r requirements.txt
+```
+
+6. run the app.py with python3
+** python 2.7 **
+```
+python app.py
+```
+
+** python 3.7 **
+```
+python3 app.py
+```
+7. go to localhost 127.0.0.1:5000 on any browser
+
+http://127.0.0.1:5000/
