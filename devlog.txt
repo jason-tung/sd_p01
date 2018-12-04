@@ -96,9 +96,9 @@ Worked with Bill Ni on implementing horoscope functionality in app.py from HTML 
 Small fixes in app.py
 Worked with Wei Wen on HTML forms.
 ==============================================================
-fristL -- TIMESTAMP
+jasonT -- 2018-12-04 13:26
 --------------------------------------------------------------
-<Thing fristL did.>
+updated RM
 ==============================================================
 fristL -- TIMESTAMP
 --------------------------------------------------------------
