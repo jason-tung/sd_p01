@@ -3,6 +3,8 @@
 {% block body %}
 <h1> Project Almanac </h1>
 
+
+
 <a href="/horoscope"> Click here for horoscope </a> <br> <hr>
 {% for line in dctnary %}
     {% if line in "nasaimg" %}
@@ -16,10 +18,10 @@
         </p>
     {% elif line in "newsarticles" %}
         <p> Title: Content <br>
-            {% for article in dctnary["holidays"] %}
-                <a href="{{ }}"
-                {{ ["name"] }} : {{ day["date"][:10]}}
-                <br>
+            {% for article in dctnary["newsarticles"] %}
+                <a href="{{ article[0] }}"> {{ article[1] }} </a>
+                {{ article[2] }}
+                <br> <br>
             {% endfor %}
     {% else %}
         {{ line }}: {{ dctnary[line] }}
