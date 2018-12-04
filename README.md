@@ -26,6 +26,8 @@ Our project utilizes various APIs, so the user needs a json file with the API ke
 "ipapi":"xxxxxxxxxxxxxxxxxx"
 }
 ```
+This will be elaborated upon in the instructions. Just fetch your API keys for now.
+
 
 All of the APIs we used are hyperlinked in the table below with a brief description. The hyperlinks should be sufficient should get the user started on procuring API keys.
 
