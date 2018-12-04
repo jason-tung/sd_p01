@@ -16,11 +16,13 @@ def load_bypass(thing):
     return json.loads(webpage)
 
 
-key_loc = "http://homer.stuy.edu/~jtung/sd_keys/p01.json"
+#key_loc = load("http://homer.stuy.edu/~jtung/sd_keys/p01.json")
+with open("keys.json") as json_file:
+    key_loc = json.load(json_file)
 
 @app.route('/')
 def hello_world():
-    my_dict = load(key_loc)
+    my_dict = key_loc
 
     # time/date
 

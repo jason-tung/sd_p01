@@ -1,12 +1,13 @@
 {
-"ipstack":"xxxxxxxxxxxxxxxxxx",
+"ipstack":"f93b1334fc529256964e1e57914c6efd",
 "astrologyapi":{
-  "user":"xxxxxxxxxxxxxxxxxx",
-  "key":"xxxxxxxxxxxxxxxxxx"
+  "user":"603245",
+  "key":"b5a3c3ce13cf7738819a69081d01637d"
 },
-"newsapi":"xxxxxxxxxxxxxxxxxx",
-"darksky":"xxxxxxxxxxxxxxxxxx",
-"calendarindex":"xxxxxxxxxxxxxxxxxx",
-"nasa":"xxxxxxxxxxxxxxxxxx",
-"ipapi":"xxxxxxxxxxxxxxxxxx"
+
+"newsapi":"787818db4d684f51808ddf3404cee289",
+"darksky":"cdf0efd1b0b4e825c0ee3c8d151541bc",
+  "calendarindex":"7339fd9a68ae9a0f978e8d92885641552d47becf",
+"nasa":"dfWBHYGg1JQCpauQJ08a7QpdPiaXz9wTN4hfiXeX",
+"ipapi":"dfWBHYGg1JQCpauQJ08a7QpdPiaXz9wTN4hfiXeX"
 }
