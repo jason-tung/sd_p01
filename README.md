@@ -9,7 +9,7 @@ Vincent Chi, Bill Ni, Jason Tung, Wei Wen Zhou
 Our website is designed to provide the user with information correlating certain locations (much like an almanac) but do so while also giving more “live” information like current news in the area, the weather, what time the sun will set on a given day, etc. We plan on presenting this in a newspaper format (like NYT) with horoscopes, poems, and maybe a crossword puzzle.
 
 ### How To Procure Your Own API Keys:
-Our project utilizes various APIs, so the user needs a json file with the API keys formatted as such:
+Our project utilizes various APIs, so the user needs a json file with the API keys formatted as such (the skeleton is provided under `keys.json`):
 
 ```
 {
@@ -96,22 +96,22 @@ cd <path-to-repo>
 ```
 pip3 install -r requirements.txt
 ```
-6a. create a file named `keys.json`.
+6a. edit `keys.json`.
 
-6b. fill the `keys.json` file with your corresponding api keys in the following format (the consecutive x's should be replaced wtih the appropriate api key):
+6b. fill the `keys.json` file with your corresponding api keys in the following format (the api keys i filled out are made up):
 ```
 {
-"ipstack":"xxxxxxxxxxxxxxxxxx",
+"ipstack":"123456789123456789",
 "astrologyapi":{
-  "user":"xxxxxxxxxxxxxxxxxx",
-  "key":"xxxxxxxxxxxxxxxxxx"
+  "user":"123456789123456789",
+  "key":"123456789123456789"
 },
 
-"newsapi":"xxxxxxxxxxxxxxxxxx",
-"darksky":"xxxxxxxxxxxxxxxxxx",
-"calendarindex":"xxxxxxxxxxxxxxxxxx",
-"nasa":"xxxxxxxxxxxxxxxxxx",
-"ipapi":"xxxxxxxxxxxxxxxxxx"
+"newsapi":"123456789123456789",
+"darksky":"123456789123456789",
+"calendarindex":"123456789123456789",
+"nasa":"123456789123456789",
+"ipapi":"123456789123456789"
 }
 ```
 
