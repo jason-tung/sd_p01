@@ -9,7 +9,25 @@ Vincent Chi, Bill Ni, Jason Tung, Wei Wen Zhou
 Our website is designed to provide the user with information correlating certain locations (much like an almanac) but do so while also giving more “live” information like current news in the area, the weather, what time the sun will set on a given day, etc. We plan on presenting this in a newspaper format (like NYT) with horoscopes, poems, and maybe a crossword puzzle.
 
 ### How To Procure Your Own API Keys:
-Team azrael uses its own API keys to run the website (stored in an API on the stuy.edu servers), but if you so choose to get your own, the APIs are listed below with brief descriptions and websites to start on getting your own keys.
+Our project utilizes various APIs, so the user needs a json file with the API keys formatted as such:
+
+```
+{
+"ipstack":"xxxxxxxxxxxxxxxxxx",
+"astrologyapi":{
+  "user":"xxxxxxxxxxxxxxxxxx",
+  "key":"xxxxxxxxxxxxxxxxxx"
+},
+
+"newsapi":"xxxxxxxxxxxxxxxxxx",
+"darksky":"xxxxxxxxxxxxxxxxxx",
+"calendarindex":"xxxxxxxxxxxxxxxxxx",
+"nasa":"xxxxxxxxxxxxxxxxxx",
+"ipapi":"xxxxxxxxxxxxxxxxxx"
+}
+```
+
+All of the APIs we used are hyperlinked in the table below with a brief description. The hyperlinks should be sufficient should get the user started on procuring API keys.
 
 api | description
 --- | ---
@@ -57,7 +75,7 @@ git clone git@github.com:jason-tung/sd_p01.git
 git clone https://github.com/jason-tung/sd_p01.git
 ```
 
-2. (optional) make a virutal env
+2. (optional) make a virtual env
 ```
 python3 -m venv <venv_name>
 ```
@@ -76,13 +94,37 @@ cd <path-to-repo>
 ```
 pip3 install -r requirements.txt
 ```
+6a. create a file named `keys.json`.
 
-6. run the app.py with python3
+6b. fill the `keys.json` file with your corresponding api keys in the following format (the consecutive x's should be replaced wtih the appropriate api key):
+```
+{
+"ipstack":"xxxxxxxxxxxxxxxxxx",
+"astrologyapi":{
+  "user":"xxxxxxxxxxxxxxxxxx",
+  "key":"xxxxxxxxxxxxxxxxxx"
+},
+
+"newsapi":"xxxxxxxxxxxxxxxxxx",
+"darksky":"xxxxxxxxxxxxxxxxxx",
+"calendarindex":"xxxxxxxxxxxxxxxxxx",
+"nasa":"xxxxxxxxxxxxxxxxxx",
+"ipapi":"xxxxxxxxxxxxxxxxxx"
+}
+```
+
+7. run the app.py with python3
 
 **python 3.7**
 ```
 python3 app.py
 ```
-7. go to localhost 127.0.0.1:5000 on any browser
+
+**if in virtual env with python 3.7**
+```
+python app.py
+```
+
+8. go to localhost 127.0.0.1:5000 on any browser
 
    http://127.0.0.1:5000/
