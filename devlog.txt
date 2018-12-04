@@ -90,7 +90,7 @@ jasonT -- 2018-12-03 13:29
 --------------------------------------------------------------
 Replaced horoscope api with an easier to use version
 ==============================================================
-vincentC -- 2018-12-3 13:49
+vincentC -- 2018-12-03 13:49
 --------------------------------------------------------------
 Worked with Bill Ni on implementing horoscope functionality in app.py from HTML get request.
 Small fixes in app.py
