@@ -106,10 +106,9 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-<<<<<<< HEAD
 p01.json
 
-=======
+
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
@@ -178,4 +177,5 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 *.xml
->>>>>>> 791bb5941317dcaa2676ce97300ee269ee1ee409
+
+keys.json
