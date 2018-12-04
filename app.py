@@ -52,10 +52,10 @@ def hello_world():
         d = load(requrl)
         newsarticles = []
         for i in range(10):
-            newsarticles.append([d["articles"][i]["url"], d["articles"][i]["title"], d["articles"][i]["content"]])
+            newsarticles.append([d["articles"][i]["url"], d["articles"][i]["title"]])
     except:
         newsarticles = None
-
+    print(newsarticles)
     # location
 
     requrl = "https://ipapi.co/json/"
@@ -165,7 +165,7 @@ def hello_world():
 
     return render_template("index.html",title="project almanac", dctnary=d)
 
-    
+
 
 @app.route('/horoscope')
 def dayweekmonth():
