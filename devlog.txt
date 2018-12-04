@@ -90,9 +90,11 @@ jasonT -- 2018-12-03 13:29
 --------------------------------------------------------------
 Replaced horoscope api with an easier to use version
 ==============================================================
-fristL -- TIMESTAMP
+vincentC -- 2018-12-3 13:49
 --------------------------------------------------------------
-<Thing fristL did.>
+Worked with Bill Ni on implementing horoscope functionality in app.py from HTML get request.
+Small fixes in app.py
+Worked with Wei Wen on HTML forms.
 ==============================================================
 fristL -- TIMESTAMP
 --------------------------------------------------------------
