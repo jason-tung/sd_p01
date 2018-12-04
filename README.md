@@ -8,7 +8,7 @@ Vincent Chi, Bill Ni, Jason Tung, Wei Wen Zhou
 ### Abstract:
 Our website is designed to provide the user with information correlating certain locations (much like an almanac) but do so while also giving more “live” information like current news in the area, the weather, what time the sun will set on a given day, etc. We plan on presenting this in a newspaper format (like NYT) with horoscopes, poems, and maybe a crossword puzzle.
 
-### How To Procure Your Own API Keys
+### How To Procure Your Own API Keys:
 Team azrael uses its own API keys to run the website (stored in an API on the stuy.edu servers), but if you so choose to get your own, the APIs are listed below with brief descriptions and websites to start on getting your own keys.
 
 api | description
