@@ -2,9 +2,17 @@
   <title> {{title}} </title>
 {% block body %}
 <h1> Project Almanac </h1>
-
-
-
+<hr>
+<div class="container-fluid col">
+<ul class="nav nav-pils nav-stacked col-4 border">
+    {% for article in dctnary["newsarticles"] %}
+        <li class="border">
+            <a href="{{ article[0] }}"> {{ article[1] }} </a>
+        </li>
+    {% endfor %}
+</ul>
+</div>
+<hr>
 <a href="/horoscope"> Click here for horoscope </a> <br> <hr>
 {% for line in dctnary %}
     {% if line in "nasaimg" %}
@@ -20,7 +28,6 @@
         <p> Title: Content <br>
             {% for article in dctnary["newsarticles"] %}
                 <a href="{{ article[0] }}"> {{ article[1] }} </a>
-                {{ article[2] }}
                 <br> <br>
             {% endfor %}
     {% else %}
