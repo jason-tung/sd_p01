@@ -51,7 +51,7 @@ pip3 install -r requirements.txt
 git clone git@github.com:jason-tung/sd_p01.git
 ```
 
-** https **
+**https**
 ```
 git clone https://github.com/jason-tung/sd_p01.git
 ```
@@ -77,12 +77,12 @@ pip3 install -r requirements.txt
 ```
 
 6. run the app.py with python3
-** python 2.7 **
+**python 2.7**
 ```
 python app.py
 ```
 
-** python 3.7 **
+**python 3.7**
 ```
 python3 app.py
 ```
