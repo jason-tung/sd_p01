@@ -87,5 +87,4 @@ python app.py
 python3 app.py
 ```
 7. go to localhost 127.0.0.1:5000 on any browser
-
-http://127.0.0.1:5000/
+   http://127.0.0.1:5000/
