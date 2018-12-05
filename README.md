@@ -13,23 +13,16 @@ Our project utilizes various APIs, so the user needs a json file with the API ke
 
 ```
 {
-"ipstack":"xxxxxxxxxxxxxxxxxx",
-"astrologyapi":{
-  "user":"xxxxxxxxxxxxxxxxxx",
-  "key":"xxxxxxxxxxxxxxxxxx"
-},
-
-"newsapi":"xxxxxxxxxxxxxxxxxx",
-"darksky":"xxxxxxxxxxxxxxxxxx",
-"calendarindex":"xxxxxxxxxxxxxxxxxx",
-"nasa":"xxxxxxxxxxxxxxxxxx",
-"ipapi":"xxxxxxxxxxxxxxxxxx"
+"newsapi":"xxxxxxxxx",
+"darksky":"xxxxxxxxx",
+"calendarindex":"xxxxxxxxx",
+"nasa":"xxxxxxxxx"
 }
 ```
 This will be elaborated upon in the instructions. Just fetch your API keys for now.
 
 
-All of the APIs we used are hyperlinked in the table below with a brief description. The hyperlinks should be sufficient to get the user started on procuring API keys.
+All of the APIs we used are hyperlinked in the table below with a brief description. The hyperlinks should be sufficient to get the user started on procuring API keys. Please note that not all of the apis need keys.
 
 api | description
 --- | ---
@@ -101,17 +94,10 @@ pip3 install -r requirements.txt
 6b. fill the `keys.json` file with your corresponding api keys in the following format (the api keys i filled out are made up):
 ```
 {
-"ipstack":"123456789123456789",
-"astrologyapi":{
-  "user":"123456789123456789",
-  "key":"123456789123456789"
-},
-
-"newsapi":"123456789123456789",
-"darksky":"123456789123456789",
-"calendarindex":"123456789123456789",
-"nasa":"123456789123456789",
-"ipapi":"123456789123456789"
+"newsapi":"xxxxxxxxx",
+"darksky":"xxxxxxxxx",
+"calendarindex":"xxxxxxxxx",
+"nasa":"xxxxxxxxx"
 }
 ```
 
