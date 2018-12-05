@@ -1,18 +1,17 @@
 import json
 import datetime
-from urllib import request, parse, error
-from urllib.request import Request, urlopen
+import urllib
 
-from flask import Flask, render_template, jsonify, flash
+from flask import Flask, render_template, jsonify, flash, request
 
 app = Flask(__name__)
 
 def load(thing):
-    return json.loads(request.urlopen(thing).read())
+    return json.loads(urllib.request.urlopen(thing).read())
 
 def load_bypass(thing):
-    req = Request(thing,headers={'User-Agent': 'Mozilla/5.0'})
-    webpage = urlopen(req).read()
+    req = urllib.request.Request(thing,headers={'User-Agent': 'Mozilla/5.0'})
+    webpage = urllib.request.urlopen(req).read()
     return json.loads(webpage)
 
 
@@ -33,7 +32,7 @@ def hello_world():
     data["state"] = "NY"
     data["api_key"] = my_dict["calendarindex"]
 
-    requrl += parse.urlencode(data)
+    requrl += urllib.parse.urlencode(data)
 
     try:
         d = load_bypass(requrl)
@@ -48,7 +47,7 @@ def hello_world():
     data["country"] = "us"
     data["apiKey"] = my_dict["newsapi"]
 
-    requrl += parse.urlencode(data)
+    requrl += urllib.parse.urlencode(data)
 
     try:
         d = load(requrl)
@@ -57,7 +56,7 @@ def hello_world():
             newsarticles.append([d["articles"][i]["url"], d["articles"][i]["title"]])
     except:
         newsarticles = None
-        
+
     # location
 
     requrl = "https://ipapi.co/json/"
@@ -95,7 +94,7 @@ def hello_world():
     data["date"] = datetime.date.today()
     data["formatted"] = 0
 
-    requrl += parse.urlencode(data)
+    requrl += urllib.parse.urlencode(data)
 
     try:
         d = load(requrl)
@@ -114,7 +113,7 @@ def hello_world():
     data["date"] = datetime.date.today() + datetime.timedelta(days=1)
     data["formatted"] = 0
 
-    requrl += parse.urlencode(data)
+    requrl += urllib.parse.urlencode(data)
 
     try:
         d = load(requrl)
@@ -132,7 +131,7 @@ def hello_world():
     data["lat"] = lat
     data["dim"] = "0.2"
     data["api_key"] = my_dict["nasa"]
-    requrl += parse.urlencode(data)
+    requrl += urllib.parse.urlencode(data)
     try:
         d = load(requrl)
         nasaimg = d["url"]
