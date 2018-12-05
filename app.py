@@ -53,7 +53,7 @@ def hello_world():
         d = load(requrl)
         newsarticles = []
         for i in range(10):
-            newsarticles.append([d["articles"][i]["url"], d["articles"][i]["title"]])
+            newsarticles.append([d["articles"][i]["url"], d["articles"][i]["title"].split(" - ")[0]])
     except:
         newsarticles = None
 
