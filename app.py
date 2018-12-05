@@ -57,7 +57,7 @@ def hello_world():
             newsarticles.append([d["articles"][i]["url"], d["articles"][i]["title"]])
     except:
         newsarticles = None
-    print(newsarticles)
+        
     # location
 
     requrl = "https://ipapi.co/json/"
