@@ -95,6 +95,7 @@ vincentC -- 2018-12-03 13:49
 Worked with Bill Ni on implementing horoscope functionality in app.py from HTML get request.
 Small fixes in app.py
 Worked with Wei Wen on HTML forms.
+Added calendar index to knowledgebase.
 ==============================================================
 jasonT -- 2018-12-04 13:26
 --------------------------------------------------------------
