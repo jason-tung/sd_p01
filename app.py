@@ -14,6 +14,13 @@ def load_bypass(thing):
     webpage = urllib.request.urlopen(req).read()
     return json.loads(webpage)
 
+def suntimeparse(s):
+    l = s.split("T")
+    s = l[1]
+    s = str((int(s[:2]) - 5) % 12) + s[2:]
+    l = s.split("+")
+    s = l[0]
+    return s
 
 #key_loc = load("http://homer.stuy.edu/~jtung/sd_keys/p01.json")
 with open("keys.json") as json_file:
@@ -98,8 +105,8 @@ def hello_world():
 
     try:
         d = load(requrl)
-        srisetoday = d["results"]["sunrise"]
-        ssettoday = d["results"]["sunset"]
+        srisetoday = suntimeparse(d["results"]["sunrise"])
+        ssettoday = suntimeparse(d["results"]["sunset"])
     except:
         srisetoday = None
         ssettoday = None
@@ -117,8 +124,8 @@ def hello_world():
 
     try:
         d = load(requrl)
-        srisetmw = d["results"]["sunrise"]
-        ssettmw = d["results"]["sunset"]
+        srisetmw = suntimeparse(d["results"]["sunrise"])
+        ssettmw = suntimeparse(d["results"]["sunset"])
     except:
         srisetmw = None
         ssettmw = None
