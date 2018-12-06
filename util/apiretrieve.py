@@ -69,7 +69,9 @@ def maincontent():
         lat = d["latitude"]
         currcity = d["city"]
         currreg = d["region"]
+        regid = d["region_code"]
         currcoun = d["country_name"]
+        counid = d["country"]
 
         locationinfo = {"currcity":currcity, "currreg":currreg, "currcoun": currcoun}
     except:
@@ -81,9 +83,9 @@ def maincontent():
 
     requrl = "https://www.calendarindex.com/api/v1/holidays/json?"
     data = {}
-    data["country"] = "US"
-    data["year"] = "2018"
-    data["state"] = "NY"
+    data["country"] = counid
+    data["year"] = datetime.datetime.today().year
+    data["state"] = regid
     data["api_key"] = my_dict["calendarindex"]
 
     requrl += urllib.parse.urlencode(data)
@@ -98,7 +100,7 @@ def maincontent():
 
     requrl = "https://newsapi.org/v2/top-headlines?"
     data = {}
-    data["country"] = "us"
+    data["country"] = counid
     data["apiKey"] = my_dict["newsapi"]
 
     requrl += urllib.parse.urlencode(data)
