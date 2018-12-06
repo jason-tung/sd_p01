@@ -1,10 +1,32 @@
 {% extends "base.html" %}
-  <title> {{title}} </title>
+
+<title> {{title}} </title>
+
 {% block body %}
-<div class="container container-fluid">
-    <form>
-        <input type="text" name="sunsign" class="form-control" placeholder="Aries">
-        <button type="submit" class="btn btn-primary"> Submit </buton>
-    </form>
+
+<div class="container container-fluid" id="encapsule">
+	<h1>{{ sign }}</h1>
+
+	<h3>Your daily horoscope</h3>
+    {{ dctnary["today"] }}
+
+    <br>
+    <br>
+
+    <h3>Your weekly horoscope</h3>
+    {{ dctnary["week"] }}
+
+    <br>
+    <br>
+
+	<h3>Your monthly horoscope</h3>
+    {{ dctnary["month"] }}
+
+    <br>
+    <br>
+
+    <h3>Your yearly horoscope</h3>
+    {{ dctnary["year"] }}
 </div>
+
 {% endblock %}

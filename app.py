@@ -30,7 +30,24 @@ with open("keys.json") as json_file:
 def hello_world():
     my_dict = key_loc
 
-    # time/date
+    # location
+
+    requrl = "https://ipapi.co/json/"
+    try:
+        d = load(requrl)
+        lon = d["longitude"]
+        lat = d["latitude"]
+        currcity = d["city"]
+        currreg = d["region"]
+        currcoun = d["country_name"]
+
+        locationinfo = {"currcity":currcity, "currreg":currreg, "currcoun": currcoun}
+    except:
+        lon = 0
+        lat = 0
+        locationinfo = None
+
+    # holidays
 
     requrl = "https://www.calendarindex.com/api/v1/holidays/json?"
     data = {}
@@ -64,17 +81,6 @@ def hello_world():
     except:
         newsarticles = None
 
-    # location
-
-    requrl = "https://ipapi.co/json/"
-    try:
-        d = load(requrl)
-        lon = d["longitude"]
-        lat = d["latitude"]
-    except:
-        lon = 0
-        lat = 0
-
     # weather
 
     requrl = "https://api.darksky.net/forecast/" + my_dict["darksky"] + "/" + str(lat) + "," + str(lon)
@@ -86,6 +92,7 @@ def hello_world():
             for alert in d["alerts"]:
                 weatheralerts.append([alert["title"], alert["uri"]])
         currentweather = d["minutely"]["summary"]
+        currtemp = d["currently"]["temperature"]
         weekweather = d["daily"]["summary"]
     except:
         weatheralerts = None
@@ -151,25 +158,28 @@ def hello_world():
     try:
         d.load(requrl)
 
-        poems = []
-        for poem in d:
-            poems.append({"title":poem["title"], "poet":poem["poet"]["name"], "poem":poem["content"]})
+        poem = {"title":poem["title"], "poet":poem["poet"]["name"], "poem":poem["content"]}
     except:
-        poems = None
+        poem = None
 
     # place all api data into a dict
 
     d = {}
+    d["currtime"] = str(datetime.datetime.now().time())[:9]
+    d["locationinfo"] = locationinfo
     d["holidays"] = holidays
     d["newsarticles"] = newsarticles
+    if weatheralerts != []:
+        d["weatheralerts"] = weatheralerts
     d["currentweather"] = currentweather
+    d["currenttemp"] = currtemp
     d["weekweather"] = weekweather
     d["srisetoday"] = srisetoday
     d["ssettoday"] = ssettoday
     d["srisetmw"] = srisetmw
     d["ssettmw"] = ssettmw
     d["nasaimg"] = nasaimg
-    d["poems"] = poems
+    d["poem"] = poem
 
     return render_template("index.html",title="project almanac", dctnary=d)
 
@@ -208,6 +218,14 @@ def dayweekmonth():
         year = None
 
     d["year"] = year["horoscope"]
+
+    ss = ss[0].upper() + ss[1:]
+
+    return render_template("horoscope.html", dctnary=d, sign=ss)
+
+@app.route("/sunsign")
+def ssselect():
+    return render_template("sunsign.html")
 
 
 if __name__ == "__main__":
