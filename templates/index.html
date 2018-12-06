@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-  <title> {{title}} </title>
+<title> {{title}} </title>
 {% block body %}
 <div class="container container-fluid" id="encapsule">
     <h1> Project Almanac </h1>
@@ -17,10 +17,10 @@
             <ul class="nav nav-pils flex-column col-6 align-items-end" id="leftside">
                 <h2>News</h2>
                 {% for article in dctnary["newsarticles"] %}
-                    <li>
+                    <li style="padding-bottom: 20px">
                         <a href="{{ article[0] }}"> {{ article[1] }} </a>
+                        <br>
                     </li>
-                    <br>
                 {% endfor %}
                 <a href="https://newsapi.org/" id="attribution">Powered by News API</a>
             </ul>

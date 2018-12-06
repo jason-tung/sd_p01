@@ -158,7 +158,7 @@ def hello_world():
     try:
         d.load(requrl)
 
-        poem = {"title":poem["title"], "poet":poem["poet"]["name"], "poem":poem["content"]}
+        poem = {"title":d[0]["title"], "poet":d[0]["poet"]["name"], "poem":d[0]["content"]}
     except:
         poem = None
 
@@ -221,11 +221,11 @@ def dayweekmonth():
 
     ss = ss[0].upper() + ss[1:]
 
-    return render_template("horoscope.html", dctnary=d, sign=ss)
+    return render_template("horoscope.html", title=ss+" horoscope", dctnary=d, sign=ss)
 
 @app.route("/sunsign")
 def ssselect():
-    return render_template("sunsign.html")
+    return render_template("sunsign.html", title="select sunsign")
 
 
 if __name__ == "__main__":
