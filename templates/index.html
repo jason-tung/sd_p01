@@ -1,9 +1,7 @@
 {% extends "base.html" %}
 <title> {{title}} </title>
 {% block body %}
-<div class="container container-fluid" id="encapsule">
-    <h1> Project Almanac </h1>
-    <hr>
+<div class="container container-fluid">
     <div class="container-fluid">
 
         {% if "weatheralerts" in dctnary.keys() %}
@@ -35,9 +33,9 @@
             </div>
         </div>
 
-        <div class="container-fluid row" style="padding-top: 20px">
+        <div class="row" style="padding-top: 20px">
             <!-- Holidays -->
-            <div class="col-6" id="leftside">
+            <div class="col-6 align-items-end" id="leftside">
                 <h2>Holidays</h2>
                 <table style="float: right">
                     {% for h in dctnary["holidays"] %}
@@ -61,7 +59,7 @@
                 </table>
             </div>
 
-            <div class="container-fluid col-6" id="rightside">
+            <div class="col-6 align-items-start" style="padding-left: 30px" d="rightside">
 
                 <div class="row">
                     <h2>Weather</h2>
