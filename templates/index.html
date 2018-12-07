@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 <title> {{title}} </title>
+<a href="#news">News</a> 
+<a href="#location">Location</a> 
+<a href="#holidays">Holidays</a> 
+<a href="#weather">Weather</a> 
+<a href="#suntimes">Sunrise/Sunsets</a> 
+<a href="#horoscope">Horoscopes</a> 
+<a href="#poems">Poems</a> 
 {% block body %}
 <div class="container container-fluid">
     <div class="container-fluid">
@@ -13,7 +20,7 @@
         <div class="row">
             <!-- News column -->
             <ul class="nav nav-pils flex-column col-6 align-items-end" id="leftside">
-                <h2>News</h2>
+                <h2>News</h2> <a name = "news">
                 {% for article in dctnary["newsarticles"] %}
                     <li style="padding-bottom: 20px">
                         <a href="{{ article[0] }}"> {{ article[1] }} </a>
@@ -24,7 +31,7 @@
             </ul>
 
             <div class="col-6 align-items-start" id="rightside">
-                <h2>Current Location</h2>
+                <h2>Current Location</h2> <a name = "location">
                 {{ dctnary["locationinfo"]["currcity"] }}, {{ dctnary["locationinfo"]["currreg"] }}, {{ dctnary["locationinfo"]["currcoun"] }}
                 <br>
                 Last updated: {{ dctnary["currtime"] }}
@@ -36,7 +43,7 @@
         <div class="row" style="padding-top: 20px">
             <!-- Holidays -->
             <div class="col-6 align-items-end" id="leftside" style="background-color: #F0B67F">
-                <h2>Holidays</h2>
+                <h2>Holidays</h2> <a name = "holidays">
                 <table style="float: right">
                     {% for h in dctnary["holidays"] %}
                         <tr>
@@ -62,7 +69,7 @@
             <div class="col-6 align-items-start" style="padding-left: 30px" d="rightside">
 
                 <div class="row" style="background-color: #20A4F3">
-                    <h2>Weather</h2>
+                    <h2>Weather</h2> <a name = "weather">
                     <ul>
                         <li>Current -- {{ dctnary["currentweather"] }} {{ dctnary["currenttemp"] }}°F</li>
                         <li>Weekly -- {{ dctnary["weekweather"] }}</li>
@@ -72,7 +79,7 @@
                 </div>
 
                 <div class="row" style="background-color: #20A4F3">
-                    <h2>Sunrise & Sunset Times</h2>
+                    <h2>Sunrise & Sunset Times</h2> <a name = "suntimes">
                     <ul>
                         <li>Sunrise Today: {{ dctnary["srisetoday"] }}</li>
                         <li>Sunset Today: {{ dctnary["ssettoday"] }}</li>
@@ -84,7 +91,7 @@
                 </div>
 
                 <div class="row" style="background-color: #000022">
-                    <h2 style="padding-right: 300px; color: #000000">Horoscope</h2>
+                    <h2 style="padding-right: 300px; color: #000000">Horoscope</h2> <a name = "horoscope">
                     <br>
                     <ul>
                         <li style="list-style-type: none;"><a href="/sunsign">Select a sun sign</a></li>
@@ -92,7 +99,7 @@
                 </div>
 
                 <div class="row">
-                    <h2>Poems</h2>
+                    <h2>Poems</h2> <a name = "poems">
                     <ul>
                         <li style="list-style-type: none;"><h4>{{ dctnary["poem"]["title"] }}</h5></li>
                         <li style="list-style-type: none;"><h5>{{ dctnary["poem"]["poet"] }}</h5></li>
