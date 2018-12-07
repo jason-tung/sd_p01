@@ -3,14 +3,23 @@ import datetime
 import urllib
 
 def load(thing):
+    '''
+    loads api into dictionary
+    '''
     return json.loads(urllib.request.urlopen(thing).read())
 
 def load_bypass(thing):
+    '''
+    loads api into dictionary while bypassing some security features
+    '''
     req = urllib.request.Request(thing,headers={'User-Agent': 'Mozilla/5.0'})
     webpage = urllib.request.urlopen(req).read()
     return json.loads(webpage)
 
 def horoscope(ss):
+    '''
+    generates horoscope information
+    '''
     d = {}
 
     requrl = "http://horoscope-api.herokuapp.com/horoscope/today/" + ss
@@ -48,6 +57,9 @@ def horoscope(ss):
     return {"title":t, "dict":d, "sign":ss}
 
 def suntimeparse(s):
+    '''
+        generates horoscope suntime
+    '''
     l = s.split("T")
     s = l[1]
     s = str((int(s[:2]) - 5) % 12) + s[2:]
@@ -56,6 +68,9 @@ def suntimeparse(s):
     return s
 
 def maincontent():
+    '''
+        generates other api information
+        '''
     with open("keys.json") as json_file:
         key_loc = json.load(json_file)
     my_dict = key_loc
@@ -130,6 +145,7 @@ def maincontent():
         weatheralerts = None
         currentweather = None
         weekweather = None
+        currtemp = None
 
     # sunrise/sunset (today)
 
