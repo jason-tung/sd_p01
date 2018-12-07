@@ -24,7 +24,7 @@ def hello_world():
     '''
     generate mainpage
     '''
-    d = apiretrieve.maincontent("")
+    d = apiretrieve.maincontent("176.31.96.198")
 
     return render_template("index.html",title="project almanac", dctnary=d)
 

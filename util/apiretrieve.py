@@ -67,7 +67,7 @@ def suntimeparse(s):
     s = l[0]
     return s
 
-def maincontent():
+def maincontent(x):
     '''
         generates other api information
         '''
@@ -78,6 +78,8 @@ def maincontent():
     # location
 
     requrl = "https://ipapi.co/json/"
+    if len(x) > 0:
+        requrl = "https://ipapi.co/{0}/json/".format(x)
     try:
         d = load(requrl)
         lon = d["longitude"]
