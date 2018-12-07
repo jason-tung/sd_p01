@@ -103,15 +103,16 @@ updated RM
 ==============================================================
 vincentC -- 2018-12-04 14:03
 --------------------------------------------------------------
-Worked with Jason, Bill, and WeiWen on refactoring json to a local file.
+Worked with Jason, Bill, and WeiWen on refactoring json to a local file
+as well as fixing some HTML boogey.
 ==============================================================
 jasonT -- 2018-12-06 13:29
 --------------------------------------------------------------
 updating design.pdf
 ==============================================================
-fristL -- TIMESTAMP
+vincentC -- 2018-12-06 23:32
 --------------------------------------------------------------
-<Thing fristL did.>
+Really bad color implementation.
 ==============================================================
 fristL -- TIMESTAMP
 --------------------------------------------------------------
