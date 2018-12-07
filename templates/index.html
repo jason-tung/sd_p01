@@ -35,7 +35,7 @@
 
         <div class="row" style="padding-top: 20px">
             <!-- Holidays -->
-            <div class="col-6 align-items-end" id="leftside">
+            <div class="col-6 align-items-end" id="leftside" style="background-color: #F0B67F">
                 <h2>Holidays</h2>
                 <table style="float: right">
                     {% for h in dctnary["holidays"] %}
@@ -61,7 +61,7 @@
 
             <div class="col-6 align-items-start" style="padding-left: 30px" d="rightside">
 
-                <div class="row" style="background-color: #F0B67F">
+                <div class="row" style="background-color: #20A4F3">
                     <h2>Weather</h2>
                     <ul>
                         <li>Current -- {{ dctnary["currentweather"] }} {{ dctnary["currenttemp"] }}°F</li>
@@ -71,7 +71,7 @@
                     </ul>
                 </div>
 
-                <div class="row" style="background-color: #F0B67F">
+                <div class="row" style="background-color: #20A4F3">
                     <h2>Sunrise & Sunset Times</h2>
                     <ul>
                         <li>Sunrise Today: {{ dctnary["srisetoday"] }}</li>
@@ -83,8 +83,8 @@
                     </ul>
                 </div>
 
-                <div class="row">
-                    <h2 style="padding-right: 300px">Horoscope</h2>
+                <div class="row" style="background-color: #000022">
+                    <h2 style="padding-right: 300px; color: #000000">Horoscope</h2>
                     <br>
                     <ul>
                         <li style="list-style-type: none;"><a href="/sunsign">Select a sun sign</a></li>
