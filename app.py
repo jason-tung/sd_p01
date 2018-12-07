@@ -9,6 +9,9 @@ from util import apiretrieve
 app = Flask(__name__)
 
 def load(thing):
+    '''
+    loads api into dictionary
+    '''
     return json.loads(urllib.request.urlopen(thing).read())
 
 def load_bypass(thing):
@@ -18,12 +21,18 @@ def load_bypass(thing):
 
 @app.route('/')
 def hello_world():
+    '''
+    generate mainpage
+    '''
     d = apiretrieve.maincontent()
 
     return render_template("index.html",title="project almanac", dctnary=d)
 
 @app.route('/horoscope')
 def dayweekmonth():
+    '''
+    generates horoscope selection page
+    '''
     ss = request.args['sunsign']
     dict = apiretrieve.horoscope(ss)
 
@@ -31,6 +40,9 @@ def dayweekmonth():
 
 @app.route("/sunsign")
 def ssselect():
+    '''
+    return sunsign using /horoscope
+    '''
     return render_template("sunsign.html", title="select sunsign")
 
 
