@@ -86,9 +86,17 @@ cd <path-to-repo>
 ```
 
 5. install requirements
+
+**python 3.7**
 ```
 pip3 install -r requirements.txt
 ```
+
+**if in virtual env with python 3.7**
+```
+pip install -r requirements.txt
+```
+
 6a. make a file named `keys.json`.
 
 6b. fill the `keys.json` file with your corresponding api keys in the following format (the api keys i filled out are made up):
