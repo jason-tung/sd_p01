@@ -74,6 +74,7 @@ Used to fetch pictures of locations
 vincentC -- 2018-11-29 8:01
 --------------------------------------------------------------
 Random poem API implementation in app.py
+Worked with Wei Wen in HTML
 ==============================================================
 billN -- 2018-11-29 13:38
 --------------------------------------------------------------
@@ -113,7 +114,9 @@ updating design.pdf
 
 vincentC -- 2018-12-06 23:32
 --------------------------------------------------------------
+Last Minute CSS:
 Really bad color implementation (maybe?)
+HTML Clean Up:
 Added navigating links to access different parts of the website.
 ==============================================================
 fristL -- TIMESTAMP
